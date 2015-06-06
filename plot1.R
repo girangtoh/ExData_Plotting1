@@ -1,6 +1,6 @@
 
 hhPower <- read.table("./ExData_Plotting1/household_power_consumption.txt", 
-                      skip = 66637, nrows = 2880, 
+                      skip = 66637, nrows = 2880, ## I used grepl to locate the rows required instead of loading the entire file
                       sep=';', na.strings="?", check.names=FALSE)
 
 colnames(hhPower) = c("date", "time", "gActivePower", "gRPower", "voltage", 
